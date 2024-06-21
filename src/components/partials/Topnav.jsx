@@ -1,37 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Topnav = () => {
+    const [querry, setquerry] = useState("")
+    console.log(querry)
   return (
-    <div className='w-full h-[10vh] relative flex justify-center items-center'>
+    <div className='w-full h-[10vh] relative flex justify-start ml-[15%] items-center'>
         <i class="text-zinc-400 text-xl ri-search-line"></i>
         <input 
-            className='w-[50%] text-zinc-200 mx-10  text-xl outline-none border-none bg-transparent '
+            className='w-[50%] text-zinc-200 mx-10  text-[18px] outline-none border-none bg-transparent '
+            onChange={(e) => setquerry(e.target.value)}
+            value={querry}
             type="text"
             placeholder="Search Anything"
          />
-        <i class="text-zinc-400 text-2xl ri-close-fill"></i>
-        <div className='absolute w-[50%] h-[50vh] bg-zinc-200 top-[90%] overflow-auto'>
-            <Link className=' hover:text-black hover:bg-zinc-300 w-[100%] p-7 flex text-zinc-600 font-semibold border-zinc-100 justify-start items-center border-b-2 '>
+         {querry.length > 0 && (
+            <i onClick={()=> setquerry("")} class="text-zinc-400 text-2xl ri-close-fill"></i>
+         )}
+        <div className='absolute w-[50%] max-h-[50vh] bg-zinc-200 top-[90%] overflow-auto rounded'>
+            {/* <Link className=' hover:text-black hover:bg-zinc-300 w-[100%] p-7 flex text-zinc-600 font-semibold border-zinc-100 justify-start items-center border-b-2 '>
                 <img src="" alt="" />
                 <span>Hello Everyone</span>
-            </Link>
-            <Link className=' hover:text-black hover:bg-zinc-300 w-[100%] p-7 flex text-zinc-600 font-semibold border-zinc-100 justify-start items-center border-b-2 '>
-                <img src="" alt="" />
-                <span>Hello Everyone</span>
-            </Link>
-            <Link className=' hover:text-black hover:bg-zinc-300 w-[100%] p-7 flex text-zinc-600 font-semibold border-zinc-100 justify-start items-center border-b-2 '>
-                <img src="" alt="" />
-                <span>Hello Everyone</span>
-            </Link>
-            <Link className=' hover:text-black hover:bg-zinc-300 w-[100%] p-7 flex text-zinc-600 font-semibold border-zinc-100 justify-start items-center border-b-2 '>
-                <img src="" alt="" />
-                <span>Hello Everyone</span>
-            </Link>
-            <Link className=' hover:text-black hover:bg-zinc-300 w-[100%] p-7 flex text-zinc-600 font-semibold border-zinc-100 justify-start items-center border-b-2 '>
-                <img src="" alt="" />
-                <span>Hello Everyone</span>
-            </Link>
+            </Link> */}
+           
         </div>
 
     </div>

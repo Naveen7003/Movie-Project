@@ -2,5 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* primary #1F1E2r */
+/* primary #1F1E24 */
 /* secondary #6556CD */
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #181819;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6556cd;
+    border-radius: 10px;
+}
