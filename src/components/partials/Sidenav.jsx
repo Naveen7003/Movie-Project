@@ -1,7 +1,20 @@
-import React from 'react'
+import axios from '../../utils/axios'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const Sidenav = () => {
+    const GetSearches = async ()=> {
+        try {
+            const d = await axios.get("/search/multi")
+            console.log(d)
+        } catch (error) {
+            console.log("Error: ",error)
+        }
+    }
+
+    useEffect(()=> {
+        GetSearches()
+    },[])
   return (
    
     <div className='h-screen w-[20%] border-r-2 border-zinc-300 p-3'>
