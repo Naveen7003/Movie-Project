@@ -43,6 +43,7 @@ const Home = () => {
         <div className='h-full w-[80%] overflow-auto overflow-x-hidden'>
             <Topnav />
             <Header data={wallpaper} />
+<<<<<<< HEAD
 
 
             <div className='p-3 flex justify-between'>
@@ -52,6 +53,8 @@ const Home = () => {
               <Dropdown title="Filter" options={["tv","movie","all"]} func={(e)=> setcategory(e.target.value)} />
 
             </div>
+=======
+>>>>>>> 41fea3f3d764f3ab013b3f9ac40d6a64f09f8e6d
             <HorizontalCards data={trending} />
             
         </div>
