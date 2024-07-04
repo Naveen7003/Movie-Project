@@ -17,13 +17,13 @@ const Header = ({ data }) => {
         backgroundSize: "cover",
         backgroundRepeat:"no-repeat"
       }}
-      className="w-full h-[60vh] flex flex-col items-start justify-end p-[4%]"
+      className="w-full h-[43vh] flex flex-col items-start justify-end p-6"
     >
-      <h1 className="text-[9vh] font-semibold text-zinc-300">
+      <h1 className="text-[5vh] font-semibold text-zinc-300">
         {data.name || data.title || data.original_name || data.original_title}
       </h1>
       <p className="w-1/2 text-white ">
-        {data.overview.slice(0, 200)}.....
+        {data.overview.slice(0, 150)}.....
         <Link className="text-blue-400">more</Link>
       </p>{" "}
       {/*.slice se jo overview hoga wo sirf 200 letters ka hi hoga */}
