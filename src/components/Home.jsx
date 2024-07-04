@@ -11,9 +11,14 @@ const Home = () => {
   document.title = "VideoApp | HomePage"
   const [wallpaper, setwallpaper ] = useState(null)
   const [trending, settrending] = useState(null)
+<<<<<<< HEAD
   const [category, setcategory] = useState("all")
 
   const GetHeaderWallpaper = async() => {             //fetched trending all day items for header
+=======
+
+    const GetHeaderWallpaper = async() => {             //fetched trending all day items for header
+>>>>>>> 41fea3f3d764f3ab013b3f9ac40d6a64f09f8e6d
       try {
           const {data} = await axios.get(`/trending/all/day`)
           let randomData = data.results[(Math.random() * data.results.length).toFixed()]   //yha ek random and fixed no ayega which is less than 19
@@ -22,6 +27,7 @@ const Home = () => {
           console.log("Error: ",error)
       }
   }
+<<<<<<< HEAD
 
   const Gettrending = async() => {                    //fetched trending items for cards
     try {
@@ -39,11 +45,31 @@ const Home = () => {
 
 
   return wallpaper && trending ? (                    //agr api se trending and wallpaper dono aa rhe hai tabhi show kro warna loading show kro
+=======
+
+    const Gettrending = async() => {                      //fetched trending items for cards
+    try {
+        const {data} = await axios.get(`/trending/all/day`)
+        settrending(data.results)
+    } catch (error) {
+        console.log("Error: ",error)
+    }
+  } 
+
+  useEffect(()=> {
+      !wallpaper && GetHeaderWallpaper()  //agr wallpaper mai kuch nhi hai tabhi call karna
+      !trending && Gettrending()          //agr trending mai kuch nhi hai tabhi call karna
+  },[])
+
+
+  return wallpaper && trending ? (         //agr api se trending and wallpaper dono aa rhe hai tabhi show kro warna loading show kro
+>>>>>>> 41fea3f3d764f3ab013b3f9ac40d6a64f09f8e6d
     <>
         <Sidenav />
         <div className='h-full w-[80%] overflow-auto overflow-x-hidden'>
             <Topnav />
             <Header data={wallpaper} />
+<<<<<<< HEAD
 
             <div className='p-3 flex justify-between'>
               <h1 className='text-3xl mt-2 font-semibold text-zinc-400'>
@@ -53,6 +79,8 @@ const Home = () => {
 
             </div>
 
+=======
+>>>>>>> 41fea3f3d764f3ab013b3f9ac40d6a64f09f8e6d
             <HorizontalCards data={trending} />
             
         </div>

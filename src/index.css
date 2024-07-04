@@ -32,7 +32,10 @@ select {
   background-image: none;
   flex: 1;
   padding: 0 0.5em;
+<<<<<<< HEAD
   
+=======
+>>>>>>> 41fea3f3d764f3ab013b3f9ac40d6a64f09f8e6d
   color: #fff;
   cursor: pointer;
   font-size: 1em;
@@ -59,7 +62,10 @@ select::after {
   position: absolute;
   top: 0;
   right: 0;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 41fea3f3d764f3ab013b3f9ac40d6a64f09f8e6d
   padding: 0 1em;
   background: #27272a;
   cursor: pointer;
