@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Topnav from "./partials/Topnav"
 import Dropdown from "./partials/Dropdown"
+import axios from '../utils/axios'
 
 const Trending = () => {
     document.title = "VideoApp | TrendingPage"
@@ -33,7 +34,7 @@ const Trending = () => {
             <Topnav />
             <Dropdown title="Category" options={["tv","movie","all"]} />
             <div className='w-[2%]'></div>
-            <Dropdown title="Category" options={["week","day"]} />
+            <Dropdown title="Duration" options={["week","day"]} />
 
         </div>
     </div>
