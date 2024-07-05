@@ -62,7 +62,7 @@ const TVShows = () => {
             next={GetTvshow}
             hasMore={hasMore}
             loader={<Loader />}>
-            <Cards data={tvshow} title={category} />
+            <Cards data={tvshow} title="TV" />
         </InfiniteScroll>
     </div>
 ): (

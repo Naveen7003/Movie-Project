@@ -8,7 +8,7 @@ import Dropdown from './partials/Dropdown';
 import Loader from './Loader';
 
 const Home = () => {
-  document.title = 'VideoApp | HomePage';
+  document.title = 'VideoApp | Home';
   const [wallpaper, setWallpaper] = useState(null);
   const [trending, setTrending] = useState(null);
   const [category, setCategory] = useState('all');
@@ -34,35 +34,27 @@ const Home = () => {
 
   useEffect(() => {
     getTrending();
+  }, [category]);
+
+  useEffect(() => {
     if (!wallpaper) {
       getHeaderWallpaper();
     }
-  }, [category]);
+  }, [wallpaper]);
 
   return wallpaper && trending ? (
     <>
       <Sidenav />
-<<<<<<< HEAD
-      <div className='h-full w-[80%]  overflow-auto overflow-x-hidden'>
-        <Topnav />
-        <Header data={wallpaper} />
-        <div className='p-4 flex justify-between'>
-=======
       <div className='h-full w-[80%] overflow-auto overflow-x-hidden'>
         <Topnav />
         <Header data={wallpaper} />
-        <div className='p-3 flex justify-between'>
->>>>>>> 9e22c22f5d0929afa887ed09cea2cb6f3fb771e2
+        <div className='p-4 flex justify-between'>
           <h1 className='text-3xl mt-2 font-semibold text-zinc-400'>
             Trending
           </h1>
           <Dropdown title='Filter' options={['tv', 'movie', 'all']} func={(e) => setCategory(e.target.value)} />
         </div>
-<<<<<<< HEAD
-        <HorizontalCards  data={trending} />
-=======
         <HorizontalCards data={trending} />
->>>>>>> 9e22c22f5d0929afa887ed09cea2cb6f3fb771e2
       </div>
     </>
   ) : (
