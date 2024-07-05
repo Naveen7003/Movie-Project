@@ -63,8 +63,10 @@ select::after {
   cursor: pointer;
   pointer-events: none;
   transition: 0.25s all ease;
+
 }
 
 select:hover::after {
   color: #f39c12;
+
 }
