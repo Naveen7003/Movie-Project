@@ -24,8 +24,8 @@ const Header = ({ data }) => {
       </h1>
       <p className="w-1/2 text-white ">
         {data.overview.slice(0, 150)}.....
-        <Link className="text-blue-400">more</Link>
-      </p>{" "}
+        <Link to={`/${data.media_type}/details/${data.id}`} className="text-blue-400">more</Link>
+      </p>
       {/*.slice se jo overview hoga wo sirf 200 letters ka hi hoga */}
       <p className="text-white">
         <i className="text-blue-600 text-xl ri-megaphone-fill"></i>
@@ -33,7 +33,7 @@ const Header = ({ data }) => {
         <i className="text-blue-600 ml-2 text-xl ri-album-fill"></i>
         {data.media_type.toUpperCase()}
       </p>
-      <Link className="bg-[#6556CD] font-semibold text-white mt-1 p-2">{""}Watch Trailer</Link>
+      <Link className="bg-[#6556CD] font-semibold text-white mt-1 p-2">Watch Trailer</Link>
     </div>
   );
 };
