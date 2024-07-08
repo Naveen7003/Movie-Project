@@ -9,11 +9,11 @@ const HorizontalCards = ({ data }) => {
         {data.map((d, i) => (
           <Link to={`/${d.media_type}/details/${d.id}`} key={i} className='min-w-[15%] mr-5 '>
             <img
-              className='w-[90%] h-[40%] object-cover'
+              className='w-[90%] h-[42%] object-cover '
               src={`https://image.tmdb.org/t/p/original/${d.backdrop_path || d.profile_path}`}
               alt=""
             />
-            <div className='text-white h-[40%] '>
+            <div className='text-white h-[48%] overflow-y-auto'>
               <h1 className="text-[2.5vh]  w-[78%] font-semibold">
                 {d.name || d.title || d.original_name || d.original_title}
               </h1>

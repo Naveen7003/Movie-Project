@@ -48,13 +48,15 @@ const Home = () => {
       <div className='h-full w-[80%] overflow-auto overflow-x-hidden'>
         <Topnav />
         <Header data={wallpaper} />
-        <div className='p-4 flex justify-between'>
+        <div className='p-2 flex justify-between'>
           <h1 className='text-3xl mt-2 font-semibold text-zinc-400'>
             Trending
           </h1>
           <Dropdown title='Filter' options={['tv', 'movie', 'all']} func={(e) => setCategory(e.target.value)} />
         </div>
-        <HorizontalCards data={trending} />
+        <div className='mt-2'>
+          <HorizontalCards data={trending} />
+        </div>
       </div>
     </>
   ) : (
