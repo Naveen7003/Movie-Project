@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { asyncloadmovie, removemovie } from "../store/actions/movieActions";
+<<<<<<< HEAD
 import { Link, Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
+=======
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+>>>>>>> 3732f7f0f4c674c9df9c979195155c82312a1f78
 import Loader from "../components/Loader";
 import HorizontalCards from "../components/partials/HorizontalCards"
 
@@ -28,7 +32,7 @@ const Moviedetails = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
-      className="h-[145vh] relative w-screen px-[10%]"
+      className="h-[145vh] w-screen px-[10%]"
     >
       {/* part 1 navigation */}
       <nav className="w-full h-[10vh] text-zinc-100 flex items-center gap-10 text-xl">
@@ -149,8 +153,11 @@ const Moviedetails = () => {
           data={info.recommendations.length>0 ? 
                 info.recommendations: info.similar} 
       />
+<<<<<<< HEAD
 
       <Outlet />
+=======
+>>>>>>> 3732f7f0f4c674c9df9c979195155c82312a1f78
        
       </div>
       
