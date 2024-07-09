@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import noimage from "../../../public/default-avatar-profile-icon-social-600nw-1677509740.webp"
 
 const Cards = ({data, title}) => {
   return (
@@ -8,8 +9,8 @@ const Cards = ({data, title}) => {
             <Link to={`/${card.media_type || title}/details/${card.id}`} className="w-[25vh]  relative mr-[4%] mb-[2%]" key={i}>
                 <img
                     className='h-[40vh] shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)] object-cover'
-                    src={
-                        `https://image.tmdb.org/t/p/original/${ card.poster_path ||card.backdrop_path || card.profile_path}`} alt=""
+                    src={ card.poster_path ||card.backdrop_path || card.profile_path ?
+                        `https://image.tmdb.org/t/p/original/${ card.poster_path ||card.backdrop_path || card.profile_path}`: noimage} alt=""
                 />
                 <h1 className='text-zinc-300 text-xl mt-3 font-semibold'>
                     {card.name || card.title || card.original_name || card.original_title}

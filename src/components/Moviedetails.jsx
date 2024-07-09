@@ -149,7 +149,6 @@ const Moviedetails = () => {
           data={info.recommendations.length>0 ? 
                 info.recommendations: info.similar} 
       />
-
       <Outlet />
        
       </div>

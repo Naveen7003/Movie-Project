@@ -10,7 +10,7 @@ import Moviedetails from './components/Moviedetails'
 import TvDetails from './components/TvDetails'
 import Persondetails from './components/Persondetails'
 import Trailer from './components/partials/Trailer'
-
+import Notfound from "./components/Notfound"
 const App = () => {
   return (
     <div className='w-screen h-screen flex bg-black'>
@@ -22,10 +22,13 @@ const App = () => {
         <Route path="/movie/details/:id" element={<Moviedetails />} >
           <Route path= "/movie/details/:id/trailer" element={<Trailer />} />
         </Route>
-        <Route path="/tvshows" element={<TVShows />} />
-        <Route path="/tvshows/details/:id" element={<TvDetails />} />
+        <Route path="/tv" element={<TVShows />} />
+        <Route path="/tv/details/:id" element={<TvDetails />}>
+          <Route path="/tv/details/:id/trailer" element={<Trailer />} />
+        </Route>
         <Route path="/people" element={<People />} />
         <Route path="/people/details/:id" element={<Persondetails />} />
+        <Route path="*" element={<Notfound />} />
        
       </Routes>
     </div>
