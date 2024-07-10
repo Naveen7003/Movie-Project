@@ -5,7 +5,8 @@ const Dropdown = ({title,options, func}) => {
     <div className='select'>                   {/*drop down popup */}
         <select defaultValue="0" name="format" id="format" onChange={func}>
             <option value="0"  >
-                {title}
+            
+                {title } 
             </option>
             {options.map((o,i)=> (
                 <option  key={i} value={o}>{o.toUpperCase()}</option>
