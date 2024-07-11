@@ -31,7 +31,7 @@ select {
   background: #27272a;
   background-image: none;
   flex: 1;
-  padding:0 .5em;
+  padding: 0 0.5em;
   color: #fff;
   cursor: pointer;
   font-size: 1em;
@@ -51,22 +51,21 @@ select::-ms-expand {
   background: #27272a;
   overflow: hidden;
   border-radius: 0.25em;
+  align-items: center;
 }
 
-select::after {
-  content: '25BC';
+.select::after {
+  content: '\25BC';
   position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0em;
-  background: #27272a;
-  cursor: pointer;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+  background: transparent;
   pointer-events: none;
   transition: 0.25s all ease;
-
+  color: #fff;
 }
 
-select:hover::after {
-  color: #f39c12;
-
+.select:hover::after {
+  color: #6556cd;
 }
