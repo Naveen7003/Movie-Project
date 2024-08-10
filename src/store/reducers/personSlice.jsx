@@ -17,7 +17,7 @@ const initialState = {
     },
   })
   
-  // Action creators are generated for each case reducer function
+  // Action creators are generated for each case reducer functions
   export const { loadperson, removeperson } = personSlice.actions
   
   export default personSlice.reducer
