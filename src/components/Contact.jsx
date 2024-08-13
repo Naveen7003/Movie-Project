@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import contact from "/contact-illustration.gif";
 import { Link, useNavigate } from "react-router-dom";
 const ContactUs = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
