@@ -11,6 +11,7 @@ const initialState = {
       loadtv : (state, action) => {
         state.info = action.payload;
       },
+       
       removetv : (state, action) => {
         state.info = null;
       }
